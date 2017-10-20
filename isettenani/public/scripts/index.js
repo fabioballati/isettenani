@@ -306,7 +306,7 @@ function textToSpeach() {
 	// Pipe the synthesized text to a file.
 	text_to_speech.synthesize(params).on('error', function(error) {
 	  console.log('Error:', error);
-	}).pipe(fs.createWriteStream('hello_world.wav'));
+	}).pipe(fs.createWriteStream('C:\Users\Fabio\hello_world.wav'));
 }
 
 
