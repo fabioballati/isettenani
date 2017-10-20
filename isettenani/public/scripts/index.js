@@ -289,7 +289,7 @@ function stopLoadingMessage() {
 function textToSpeach() {
     
 	//alert("Hellow World");
-	var TextToSpeechV1 = require('watson-developer-cloud/text-to-speech/v1');
+	var TextToSpeechV1 = console.require('watson-developer-cloud/text-to-speech/v1');
 	var fs = require('fs');
 
 	var text_to_speech = new TextToSpeechV1 ({
