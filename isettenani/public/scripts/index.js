@@ -286,6 +286,13 @@ function stopLoadingMessage() {
     document.getElementById('loadingImage').innerHTML = "";
 }
 
+function textToSpeach() {
+    
+	alert("Hellow World");
+	
+}
+
+
 showLoadingMessage();
 //updateServiceInfo();
 loadItems();
