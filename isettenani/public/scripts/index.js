@@ -286,6 +286,31 @@ function stopLoadingMessage() {
     document.getElementById('loadingImage').innerHTML = "";
 }
 
+function textToSpeach() {
+    
+	//alert("Hellow World");
+	var TextToSpeechV1 = require('watson-developer-cloud/text-to-speech/v1');
+	var fs = require('fs');
+
+	var text_to_speech = new TextToSpeechV1 ({
+	  username: 'ce3c3a9f-3685-4353-91fa-ec5c56493577',
+	  password: 'T31auxnJAfJB'
+	});
+
+	var params = {
+	  text: 'Hello world',
+	  voice: 'en-US_AllisonVoice',
+	  accept: 'audio/wav'
+	};
+
+	// Pipe the synthesized text to a file.
+	text_to_speech.synthesize(params).on('error', function(error) {
+	  console.log('Error:', error);
+	}).pipe(fs.createWriteStream('hello_world.wav'));
+	
+}
+
+
 showLoadingMessage();
 //updateServiceInfo();
 loadItems();
