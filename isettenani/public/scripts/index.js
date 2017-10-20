@@ -307,7 +307,6 @@ function textToSpeach() {
 	text_to_speech.synthesize(params).on('error', function(error) {
 	  console.log('Error:', error);
 	}).pipe(fs.createWriteStream('hello_world.wav'));
-	
 }
 
 
